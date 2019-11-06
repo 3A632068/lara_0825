@@ -19,14 +19,18 @@ Route::get('/', function () {
     ]);*/
 
     //練習2-5:改用 new 的方式新增資料
-    $post=new\App\Post();
+    /*$post=new\App\Post();
     $post->title='testtitle';
     $post->content='testcontent';
-    $post->save();
+    $post->save();*/
 
     //練習3-2:使用 all方法
-    $posts=\App\Post::all();
-    dd($posts);
+    /*$posts=\App\Post::all();
+    dd($posts);*/
+
+    //練習3-3:使用 find 方法
+    $post=\App\Post::find(1);
+    dd($post);
 
     return view('welcome');
 });
