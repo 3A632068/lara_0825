@@ -44,11 +44,14 @@ Route::get('/', function () {
     ]);*/
 
     //練習4-3:換用 save方法
-    $post=\App\Post::find(1);
+    /*$post=\App\Post::find(1);
     $post->title='savedtitle';
     $post->content='savedcontent';
-    $post->save();
+    $post->save();*/
 
+    //練習5-1:使用 delete方法
+    $post=\App\Post::find(1);
+    $post->delete();
 
     return view('welcome');
 });
