@@ -24,6 +24,10 @@ Route::get('/', function () {
     $post->content='testcontent';
     $post->save();
 
+    //練習3-2:使用 all方法
+    $posts=\App\Post::all();
+    dd($posts);
+
     return view('welcome');
 });
 
