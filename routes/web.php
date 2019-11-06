@@ -37,12 +37,17 @@ Route::get('/', function () {
     dd($posts);*/
 
     //練習4-1:使用 update方法
-    $post=\App\Post::find(1);
+    /*$post=\App\Post::find(1);
     $post->update([
         'title'=>'updatedtitle',
         'content'=>'updatedcontent',
-    ]);
+    ]);*/
 
+    //練習4-3:換用 save方法
+    $post=\App\Post::find(1);
+    $post->title='savedtitle';
+    $post->content='savedcontent';
+    $post->save();
 
 
     return view('welcome');
