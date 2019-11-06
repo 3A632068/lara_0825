@@ -12,6 +12,12 @@
 */
 
 Route::get('/', function () {
+    //練習2-2:使用 create方法
+    \App\Post::create([
+        'title'=>'testtitle',
+        'content'=>'testcontent',
+    ]);
+
     return view('welcome');
 });
 
