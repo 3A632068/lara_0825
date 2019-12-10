@@ -72,8 +72,14 @@ Route::get('/', function () {
     dd($fourthPost);*/
 
     //練習6-2-3.4
-    $lastPost=\App\Post::orderBy('id','DESC')->first();
-    dd($lastPost);
+    /*$lastPost=\App\Post::orderBy('id','DESC')->first();
+    dd($lastPost);*/
+
+    //練習7-1 b, d, f
+    $comment = new\App\Comment();
+    $comment->content = 'test content2';
+    $comment->post_id = '8';
+    $comment->save();
 
     return view('welcome');
 });
